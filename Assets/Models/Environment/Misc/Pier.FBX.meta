@@ -1,0 +1,172 @@
+fileFormatVersion: 2
+guid: 14271baee062218478a9bb236ed541b3
+timeCreated: 1444265714
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: Box005
+    100006: Box006
+    100008: //RootNode
+    100010: Plank
+    100012: Plank01
+    100014: Plank02
+    100016: Plank03
+    100018: Plank04
+    100020: Plank05
+    100022: Plank06
+    100024: Plank07
+    100026: Plank08
+    100028: Plank09
+    100030: Plank10
+    100032: Plank11
+    100034: Plank12
+    100036: Plank13
+    100038: pole
+    100040: pole001
+    400000: Box001
+    400002: Box002
+    400004: Box005
+    400006: Box006
+    400008: //RootNode
+    400010: Plank
+    400012: Plank01
+    400014: Plank02
+    400016: Plank03
+    400018: Plank04
+    400020: Plank05
+    400022: Plank06
+    400024: Plank07
+    400026: Plank08
+    400028: Plank09
+    400030: Plank10
+    400032: Plank11
+    400034: Plank12
+    400036: Plank13
+    400038: pole
+    400040: pole001
+    2300000: Box001
+    2300002: Box002
+    2300004: Box005
+    2300006: Box006
+    2300008: Plank
+    2300010: Plank01
+    2300012: Plank02
+    2300014: Plank03
+    2300016: Plank04
+    2300018: Plank05
+    2300020: Plank06
+    2300022: Plank07
+    2300024: Plank08
+    2300026: Plank09
+    2300028: Plank10
+    2300030: Plank11
+    2300032: Plank12
+    2300034: Plank13
+    2300036: pole
+    2300038: pole001
+    3300000: Box001
+    3300002: Box002
+    3300004: Box005
+    3300006: Box006
+    3300008: Plank
+    3300010: Plank01
+    3300012: Plank02
+    3300014: Plank03
+    3300016: Plank04
+    3300018: Plank05
+    3300020: Plank06
+    3300022: Plank07
+    3300024: Plank08
+    3300026: Plank09
+    3300028: Plank10
+    3300030: Plank11
+    3300032: Plank12
+    3300034: Plank13
+    3300036: pole
+    3300038: pole001
+    4300000: Box001
+    4300002: Box002
+    4300004: Box005
+    4300006: Box006
+    4300008: Plank01
+    4300010: Plank09
+    4300012: Plank12
+    4300014: Plank07
+    4300016: Plank13
+    4300018: Plank05
+    4300020: Plank08
+    4300022: Plank06
+    4300024: Plank10
+    4300026: Plank02
+    4300028: Plank11
+    4300030: Plank03
+    4300032: Plank04
+    4300034: Plank
+    4300036: pole
+    4300038: pole001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

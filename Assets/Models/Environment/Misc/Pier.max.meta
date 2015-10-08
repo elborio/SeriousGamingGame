@@ -12,6 +12,22 @@ ModelImporter:
     100008: Box005
     100010: Box006
     100012: //RootNode
+    100014: Plank
+    100016: Plank01
+    100018: Plank02
+    100020: Plank03
+    100022: Plank04
+    100024: Plank05
+    100026: Plank06
+    100028: Plank07
+    100030: Plank08
+    100032: Plank09
+    100034: Plank10
+    100036: Plank11
+    100038: Plank12
+    100040: Plank13
+    100042: pole
+    100044: pole001
     400000: Box001
     400002: Box002
     400004: Box003
@@ -19,24 +35,88 @@ ModelImporter:
     400008: Box005
     400010: Box006
     400012: //RootNode
+    400014: Plank
+    400016: Plank01
+    400018: Plank02
+    400020: Plank03
+    400022: Plank04
+    400024: Plank05
+    400026: Plank06
+    400028: Plank07
+    400030: Plank08
+    400032: Plank09
+    400034: Plank10
+    400036: Plank11
+    400038: Plank12
+    400040: Plank13
+    400042: pole
+    400044: pole001
     2300000: Box001
     2300002: Box002
     2300004: Box003
     2300006: Box004
     2300008: Box005
     2300010: Box006
+    2300012: Plank
+    2300014: Plank01
+    2300016: Plank02
+    2300018: Plank03
+    2300020: Plank04
+    2300022: Plank05
+    2300024: Plank06
+    2300026: Plank07
+    2300028: Plank08
+    2300030: Plank09
+    2300032: Plank10
+    2300034: Plank11
+    2300036: Plank12
+    2300038: Plank13
+    2300040: pole
+    2300042: pole001
     3300000: Box001
     3300002: Box002
     3300004: Box003
     3300006: Box004
     3300008: Box005
     3300010: Box006
+    3300012: Plank
+    3300014: Plank01
+    3300016: Plank02
+    3300018: Plank03
+    3300020: Plank04
+    3300022: Plank05
+    3300024: Plank06
+    3300026: Plank07
+    3300028: Plank08
+    3300030: Plank09
+    3300032: Plank10
+    3300034: Plank11
+    3300036: Plank12
+    3300038: Plank13
+    3300040: pole
+    3300042: pole001
     4300000: Box001
     4300002: Box002
     4300004: Box003
     4300006: Box004
     4300008: Box005
     4300010: Box006
+    4300012: Plank01
+    4300014: Plank09
+    4300016: Plank12
+    4300018: Plank07
+    4300020: Plank13
+    4300022: Plank05
+    4300024: Plank08
+    4300026: Plank06
+    4300028: Plank10
+    4300030: Plank02
+    4300032: Plank11
+    4300034: Plank03
+    4300036: Plank04
+    4300038: Plank
+    4300040: pole
+    4300042: pole001
     9500000: //RootNode
   materials:
     importMaterials: 1
