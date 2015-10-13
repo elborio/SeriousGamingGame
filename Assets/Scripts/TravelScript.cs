@@ -95,9 +95,9 @@ public class TravelScript : MonoBehaviour
 	void LoadLevelForLocationIndex(int locationMarkerIndex)
 	{
 		int sceneIndex = travelLocations[locationMarkerIndex-1].GetComponent<TravelLocationScript>().sceneIndex;
-		if(sceneIndex!=-1)
+		if(sceneIndex!=-10)
 		{
-			Application.LoadLevel(sceneIndex);
+			Application.LoadLevel(2);
 		}
 		else
 		{
