@@ -15,6 +15,7 @@ public class CinematicController : MonoBehaviour
 		DisableAllButMainCam();
 
 		anim = GameObject.FindGameObjectWithTag("CinematicCamera").GetComponent<Animator>();
+
 	}
 
 	public void DisableAllButMainCam()

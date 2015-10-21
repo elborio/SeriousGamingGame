@@ -26,11 +26,13 @@ ModelImporter:
     2300004: Leaves01
     2300006: Leaves02
     2300008: Tree
+    2300010: //RootNode
     3300000: Box002
     3300002: Leaves
     3300004: Leaves01
     3300006: Leaves02
     3300008: Tree
+    3300010: //RootNode
     4300000: Tree
     4300002: Leaves
     4300004: Leaves01
@@ -60,7 +62,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

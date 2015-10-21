@@ -5,4 +5,9 @@
 		public const string showPier = "ShowPier";
 		public const string showDirectionSign = "ShowDirectionSign";
 	}
+
+	public struct uitlegGame1
+	{
+
+	}
 }
