@@ -16,7 +16,7 @@ public class PointerSign : SignScript
 		Debug.Log(c.tag);
 		if(c.tag == "Player")
 		{
-			UI.SetActive(true);
+			//UI.SetActive(true);
 			arrow.SetActive(true);
 		}
 	}
@@ -26,7 +26,7 @@ public class PointerSign : SignScript
 		if(c.tag == "Player")
 		{
 			Debug.Log("istherenot");
-			UI.SetActive(false);
+			//UI.SetActive(false);
 			arrow.SetActive(false);
 		}
 	}

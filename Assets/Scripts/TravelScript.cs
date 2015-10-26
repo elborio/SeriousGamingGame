@@ -95,9 +95,10 @@ public class TravelScript : MonoBehaviour
 	void LoadLevelForLocationIndex(int locationMarkerIndex)
 	{
 		int sceneIndex = travelLocations[locationMarkerIndex-1].GetComponent<TravelLocationScript>().sceneIndex;
-		if(sceneIndex!=-10)
+		if(sceneIndex!=-1)
 		{
-			Application.LoadLevel(2);
+			EnableAllCameraScripts();
+			Application.LoadLevel(sceneIndex);
 		}
 		else
 		{
@@ -112,7 +113,8 @@ public class TravelScript : MonoBehaviour
 		if(c.tag == "Player")
 		{
 			playerCanEngage = true;
-			mainUI.GetComponent<UIController>().ShowPopupMessage("Press E to Select an Island, then use Enter to Travel and Q and E to cycle between islands.");
+			mainUI.gameObject.SetActive(true);
+			mainUI.GetComponent<UIController>().ShowPopupMessage("Press E to Select an Island, then use Enter to Travel and A and D to cycle between islands.");
 		}
 	}
 

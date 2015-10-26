@@ -4,7 +4,7 @@ using System.Collections;
 public class CameraController : MonoBehaviour
 {
     public GameObject player;
-    private bool update = true;
+
 
     private Vector3 offset;
     // Use this for initialization
