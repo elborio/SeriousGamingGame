@@ -27,7 +27,7 @@ public class ShopItem : MonoBehaviour {
 		Debug.Log(itemObject.name);
 		//if player has enough money do this.
 		Inventory inv = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-		inv.AddItemToInventory(itemObject.GetComponent<Item>().itemID);
+		inv.AddItemToInventory(item);
 		Destroy(gameObject);
 	}
 }
