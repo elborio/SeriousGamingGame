@@ -40,15 +40,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  itemPresets: []
-  itemUniqueIDInc: 0
+  itemPresets:
+  - name: RoodShirt
+    description: adsfadf
+    itemID: 0
+    itemDatabaseID: 0
+    itemType: 1
+    clothesColor: {r: 1, g: 0, b: 0, a: 0}
+  - name: BlauwShirt
+    description: adsfadf
+    itemID: 0
+    itemDatabaseID: 1
+    itemType: 1
+    clothesColor: {r: 0, g: .66896534, b: 1, a: 0}
+  - name: BlauwShirt
+    description: adsfadf
+    itemID: 0
+    itemDatabaseID: 1
+    itemType: 1
+    clothesColor: {r: 0, g: .66896534, b: 1, a: 0}
+  - name: BlauwShirt
+    description: adsfadf
+    itemID: 0
+    itemDatabaseID: 1
+    itemType: 1
+    clothesColor: {r: 0, g: .66896534, b: 1, a: 0}
+  - name: BlauwShirt
+    description: adsfadf
+    itemID: 0
+    itemDatabaseID: 1
+    itemType: 1
+    clothesColor: {r: 0, g: .66896534, b: 1, a: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: itemPresets.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 166650}

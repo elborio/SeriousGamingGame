@@ -3,7 +3,8 @@ using System.Collections;
 using MyEnumSpace;
 
 [System.Serializable]
-public class Item: IEquippable {
+public class Item
+{
 
 	public string name;
 	public string description;
@@ -14,29 +15,19 @@ public class Item: IEquippable {
 
 	public Color clothesColor;
 
-	public Item(ItemType it)
-	{
-		this.itemType = it;
-	}
-
-	public Item(Item item)
+	public Item(Item item) //Copy Constructor.
 	{
 		this.name = item.name;
 		this.description = item.description;
 		this.itemType = item.itemType;
 		this.itemDatabaseID = item.itemDatabaseID;
 		this.clothesColor = item.clothesColor;
-		this.itemID = GameObject.FindGameObjectWithTag("ItemDatabase").GetComponent<ItemDatabase>().GetUniqueID (this);
+		this.itemID = ItemDatabase.GetUniqueID (this);
 	}
 
 	public Item()
 	{
-		itemID = GameObject.FindGameObjectWithTag("ItemDatabase").GetComponent<ItemDatabase>().GetUniqueID (this);
-	}
-
-	public void Equip(Item item)
-	{
-
+		this.itemID = ItemDatabase.GetUniqueID (this);
 	}
 
 	public void GiveItemName(string name)

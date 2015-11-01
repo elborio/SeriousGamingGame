@@ -4,8 +4,9 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour 
 {
-	public Dictionary<int,Item> inventoryItems;
-	public Dictionary<int,Item> equippedItems;
+
+	public List<Item> inventoryItems;
+	public List<Item> equippedItems;
 
 	public GameObject shirt;
 
@@ -21,8 +22,8 @@ public class Inventory : MonoBehaviour
 	{
 		itemDatabase = GameObject.FindGameObjectWithTag("ItemDatabase").GetComponent<ItemDatabase>();
 
-		equippedItems = new Dictionary<int,Item>();
-		inventoryItems = new Dictionary<int,Item>();
+		equippedItems = new List<Item>();
+		inventoryItems = new List<Item>();
 
 		SetEquippedItemEffects();
 		RefreshInventoryVisuals();
@@ -30,21 +31,21 @@ public class Inventory : MonoBehaviour
 
 	public void AddItemToInventory(Item it)
 	{
-		inventoryItems.Add(it.itemID,it);
-		itemDatabase.items.Add (it);
+		inventoryItems.Add(it);
+		CreateNewInventoryVisual(it);
 	}
 
 	public void AddItemToInventory(int itemID)
 	{
 		Item i = itemDatabase.items[itemID];
-		inventoryItems.Add(i.itemID, i);
-		AddLatestItemVisual();
+		inventoryItems.Add(i);
+		CreateNewInventoryVisual(i);
 	}
 
 
 	public void SetEquippedItemEffects()
 	{
-		foreach(Item i in equippedItems.Values)
+		foreach(Item i in equippedItems)
 		{
 			//do this for each shirt that is equipped.
 			if(i.itemType == MyEnumSpace.ItemType.shirt && i.clothesColor!=Color.black)
@@ -57,48 +58,55 @@ public class Inventory : MonoBehaviour
 
 	public void RefreshInventoryVisuals()
 	{
-		foreach(Item i in inventoryItems.Values)
+		//TODO:add new objects for all (should delete children first and just be called InitializeInventoryVisuals)
+		foreach(Item i in inventoryItems)
 		{
 			GameObject temp = Instantiate(itemVisualHolder) as GameObject;
 			ItemVisual iui = temp.GetComponent<ItemVisual>();
-			iui.name.text = i.name;
+			iui.item = i;
 
 			temp.transform.SetParent(inventoryCanvas.transform,false);
 		}
 	}
 
-	public void AddLatestItemVisual()
+	public void AddLatestItemVisual() //dunno what this did.
 	{
 		Item i = inventoryItems[inventoryItems.Count-1];
 		GameObject temp = Instantiate(itemVisualHolder) as GameObject;
 		ItemVisual iui = temp.GetComponent<ItemVisual>();
-		iui.name.text = i.name;
-		iui.description.text = i.description;
+		iui.item = i;
 		
 		temp.transform.SetParent(inventoryCanvas.transform,false);
 	}
 
 	public void RefreshEquippedVisuals()
 	{
-		foreach(Item i in equippedItems.Values)
+		foreach(Item i in equippedItems)
 		{
 			GameObject temp = Instantiate(itemVisualHolder) as GameObject;
 			ItemVisual iui = temp.GetComponent<ItemVisual>();
-			iui.name.text = i.name;
+			iui.item = i;
 			
 			temp.transform.SetParent(equipmentCanvas.transform,false);
 		}
 	}
 
+	public void CreateNewInventoryVisual(Item i)
+	{
+		GameObject temp = Instantiate(itemVisualHolder) as GameObject;
+		ItemVisual iui = temp.GetComponent<ItemVisual>();
+		iui.item = i;
+		temp.transform.SetParent(inventoryCanvas.transform,false);
+	}
+
 	public void EquipItem(int itemID)
 	{
-		equippedItems.Add(itemID,inventoryItems[itemID]);
-		RefreshEquippedVisuals();
+		equippedItems.Add(inventoryItems[itemID]);
+
 	}
 
 	public void DequipItem(int itemID)
 	{
-		equippedItems.Remove(itemID);
-		RefreshEquippedVisuals();
+		equippedItems.Remove(equippedItems[itemID]);
 	}
 }

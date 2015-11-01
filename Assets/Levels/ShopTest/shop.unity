@@ -375,6 +375,7 @@ GameObject:
   - 33: {fileID: 526631655}
   - 65: {fileID: 526631654}
   - 23: {fileID: 526631653}
+  - 114: {fileID: 526631657}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -437,6 +438,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &526631657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526631652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf0f4fdaa743cb448c2561b6409c7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    name: Gekke Hannes Muts
+    description: eeeuhm ja
+    itemID: 0
+    itemDatabaseID: 0
+    itemType: 2
+    clothesColor: {r: 1, g: .848275781, b: 0, a: 0}
 --- !u!1 &554717489
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,6 +557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b8efd1ab0c7c443b66a43417270670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryItems: []
+  equippedItems: []
   shirt: {fileID: 554717489}
   inventoryCanvas: {fileID: 801043722}
   equipmentCanvas: {fileID: 217625489}
@@ -1210,7 +1231,8 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 80
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11427228, guid: 8bbb839e6a5583f44ba84d9e9e595cb0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8bbb839e6a5583f44ba84d9e9e595cb0, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1402893081
@@ -1381,6 +1403,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDatabaseIDs: 010000000000000001000000
+  itemUIList: {fileID: 65393254}
+  shopVisual: {fileID: 186698, guid: 0c8df824660e60a488cf99d6e8d04cfb, type: 2}
   items: []
 --- !u!1 &1528523680
 GameObject:
@@ -1473,10 +1497,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 411804, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
       propertyPath: m_LocalPosition.x
       value: -54.3308907
@@ -1508,62 +1528,6 @@ Prefab:
     - target: {fileID: 411804, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
       propertyPath: m_RootOrder
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[0].name
-      value: RoodShirt
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[0].description
-      value: adsfadf
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[1].name
-      value: BlauwShirt
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[1].description
-      value: adsfadf
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[0].itemType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[1].itemType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[1].clothesColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[1].clothesColor.g
-      value: .66896534
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[1].clothesColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[0].clothesColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[0].clothesColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[0].clothesColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemPresets.Array.data[1].itemDatabaseID
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463706, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}
-      propertyPath: itemUniqueIDInc
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e9e11202ec98a54d801df48b01e069a, type: 2}

@@ -82,7 +82,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869fdadbba4853b49985687953f639e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemObject: {fileID: 121586, guid: 122e10ec1eb1e4f45b04209ce96003a0, type: 2}
+  item:
+    name: 
+    description: 
+    itemID: 11
+    itemDatabaseID: 0
+    itemType: 0
+    clothesColor: {r: 0, g: 0, b: 0, a: 0}
   itemCost: 500
   itemNameUI: {fileID: 11440174}
   itemDescriptionUI: {fileID: 11452128}
@@ -323,7 +329,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22416082}
