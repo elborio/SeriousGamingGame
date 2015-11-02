@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -27,6 +27,7 @@ public class Inventory : MonoBehaviour
 
 		SetEquippedItemEffects();
 		RefreshInventoryVisuals();
+		RefreshEquippedVisuals()
 	}
 
 	public void AddItemToInventory(Item it)
@@ -69,6 +70,19 @@ public class Inventory : MonoBehaviour
 		}
 	}
 
+	public void RefreshEquippedVisuals()
+	{
+		//TODO:add new objects for all (should delete children first and just be called InitializeInventoryVisuals)
+		foreach(Item i in equippedItems)
+		{
+			GameObject temp = Instantiate(itemVisualHolder) as GameObject;
+			ItemVisual iui = temp.GetComponent<ItemVisual>();
+			iui.item = i;
+			
+			temp.transform.SetParent(equipmentCanvas.transform,false);
+		}
+	}
+
 	public void AddLatestItemVisual() //dunno what this did.
 	{
 		Item i = inventoryItems[inventoryItems.Count-1];
@@ -102,7 +116,35 @@ public class Inventory : MonoBehaviour
 	public void EquipItem(int itemID)
 	{
 		equippedItems.Add(inventoryItems[itemID]);
+	}
 
+	public void EquipItem(GameObject itemVisual)
+	{
+		Item item = itemVisual.GetComponent<ItemVisual>().item;
+		if(!isEquipped(item))
+		{
+			equippedItems.Add(item);
+			itemVisual.transform.SetParent(equipmentCanvas.transform,false);//move visual to equipment panel.
+		}
+		else
+		{
+			//what happens if itemType is euipped or item is already equipped.
+			equippedItems.Remove(item);
+			itemVisual.transform.SetParent(inventoryCanvas.transform,false);
+		}
+	}
+
+	//checks if item is already equippe
+	bool isEquipped(Item item)
+	{
+		foreach(Item i in equippedItems)
+		{
+			if(i == item || i.itemType ==item.itemType)//if itemtype is already worn don't equip.
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public void DequipItem(int itemID)
