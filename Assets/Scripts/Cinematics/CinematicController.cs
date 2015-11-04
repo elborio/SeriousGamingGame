@@ -60,6 +60,10 @@ public class CinematicController : MonoBehaviour
 		{
 			anim.SetTrigger("PlaySign");
 		}
+		else if(s.Equals(Cinematic.tutorial.showShop))
+		{
+			anim.SetTrigger("ShowShop");
+		}
 	}
 
 }

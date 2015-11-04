@@ -102,8 +102,8 @@ public class TravelScript : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("Selected Island Not Available");
-			mainUI.GetComponent<UIController>().ShowPopupMessage("Selected Island Not Available");
+			Debug.Log("Eiland niet beschikbaar.");
+			mainUI.GetComponent<UIController>().ShowPopupMessage("Eiland niet beschikbaar.");
 		}
 	}
 
@@ -114,7 +114,7 @@ public class TravelScript : MonoBehaviour
 		{
 			playerCanEngage = true;
 			mainUI.gameObject.SetActive(true);
-			mainUI.GetComponent<UIController>().ShowPopupMessage("Press E to Select an Island, then use Enter to Travel and A and D to cycle between islands.");
+			mainUI.GetComponent<UIController>().ShowPopupMessage("Druk op e om een eiland te selecteren. Gebruik A en D om tussen de eilanden te kiezen en druk dan op enter.");
 		}
 	}
 

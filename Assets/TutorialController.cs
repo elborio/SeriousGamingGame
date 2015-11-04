@@ -17,7 +17,7 @@ public class TutorialController : MonoBehaviour {
 	void Start()
 	{
 		tutorialStep = 0;
-		maxSteps = 2;
+		maxSteps = 3;
 		tutorialDialog = tutorialPanel.GetComponent<TutorialDialog>();
 		tutorialDialog.previousBut.gameObject.SetActive(false);
 		PlayTutorial(0);
@@ -44,7 +44,7 @@ public class TutorialController : MonoBehaviour {
 		case 0:
 			//do step 0
 			tutorialDialog.title.text = "Lopen";
-			tutorialDialog.message.text = "Gebruik AWSD om je te bewegen en de muis om rond te kijken.";
+			tutorialDialog.message.text = "Gebruik AWSD om je te bewegen en Spatiebalk om te springen.";
 			cinematicControl.DisableAllButMainCam();
 				break;
 		case 1:
@@ -55,6 +55,12 @@ public class TutorialController : MonoBehaviour {
 				"Om bij deze uitdagingen te komen moet je naar de verschillende eilanden reizen. Dit Doe je bij de stijger.";
 			cinematicControl.PlayCinematic(Cinematic.tutorial.showPier);
 			StartCoroutine(ShowDialog(3.0f));
+			break;
+		case 2:
+			tutorialDialog.title.text = "Shop";
+			tutorialDialog.message.text = "Als je voldoende punten hebt gescoord kun je hier " +
+				"nieuw spullen voor je speler kopen. Gebruik 'i' om in je rugtas te kijken en spullen aan te trekken.";
+			cinematicControl.PlayCinematic(Cinematic.tutorial.showShop);
 			break;
 		}
 //		if(step == maxSteps-1)
