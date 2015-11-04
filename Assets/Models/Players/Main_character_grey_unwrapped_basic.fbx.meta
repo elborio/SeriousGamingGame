@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1d50d0a87069afd48bb5a3948182a5d7
-timeCreated: 1446165700
+timeCreated: 1446492983
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -2131,7 +2131,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: DEF-neck
+    - boneName: ORG-neck
       humanName: Neck
       limit:
         min: {x: 0, y: 0, z: 0}

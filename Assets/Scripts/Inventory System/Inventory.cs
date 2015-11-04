@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class Inventory : MonoBehaviour 
 {
 
@@ -18,16 +19,20 @@ public class Inventory : MonoBehaviour
 
 	ItemDatabase itemDatabase;
 
-	void Start()
+	void Awake()
 	{
 		itemDatabase = GameObject.FindGameObjectWithTag("ItemDatabase").GetComponent<ItemDatabase>();
 
 		equippedItems = new List<Item>();
 		inventoryItems = new List<Item>();
 
+
+	}
+	void Start()
+	{
 		SetEquippedItemEffects();
 		RefreshInventoryVisuals();
-		RefreshEquippedVisuals()
+		RefreshEquippedVisuals();
 	}
 
 	public void AddItemToInventory(Item it)
@@ -44,7 +49,7 @@ public class Inventory : MonoBehaviour
 	}
 
 
-	public void SetEquippedItemEffects()
+	public void SetEquippedItemEffects() //TODO: Add all Effects of items.
 	{
 		foreach(Item i in equippedItems)
 		{
@@ -59,9 +64,14 @@ public class Inventory : MonoBehaviour
 
 	public void RefreshInventoryVisuals()
 	{
-		//TODO:add new objects for all (should delete children first and just be called InitializeInventoryVisuals)
+		foreach(Transform child in inventoryCanvas.transform)
+		{
+			Destroy(child);
+		}
+
 		foreach(Item i in inventoryItems)
 		{
+			print ("donesomanytime");
 			GameObject temp = Instantiate(itemVisualHolder) as GameObject;
 			ItemVisual iui = temp.GetComponent<ItemVisual>();
 			iui.item = i;
@@ -72,7 +82,10 @@ public class Inventory : MonoBehaviour
 
 	public void RefreshEquippedVisuals()
 	{
-		//TODO:add new objects for all (should delete children first and just be called InitializeInventoryVisuals)
+		foreach(Transform child in equipmentCanvas.transform)
+		{
+			Destroy(child);
+		}
 		foreach(Item i in equippedItems)
 		{
 			GameObject temp = Instantiate(itemVisualHolder) as GameObject;
@@ -93,18 +106,6 @@ public class Inventory : MonoBehaviour
 		temp.transform.SetParent(inventoryCanvas.transform,false);
 	}
 
-	public void RefreshEquippedVisuals()
-	{
-		foreach(Item i in equippedItems)
-		{
-			GameObject temp = Instantiate(itemVisualHolder) as GameObject;
-			ItemVisual iui = temp.GetComponent<ItemVisual>();
-			iui.item = i;
-			
-			temp.transform.SetParent(equipmentCanvas.transform,false);
-		}
-	}
-
 	public void CreateNewInventoryVisual(Item i)
 	{
 		GameObject temp = Instantiate(itemVisualHolder) as GameObject;
@@ -116,6 +117,7 @@ public class Inventory : MonoBehaviour
 	public void EquipItem(int itemID)
 	{
 		equippedItems.Add(inventoryItems[itemID]);
+		SetEquippedItemEffects();
 	}
 
 	public void EquipItem(GameObject itemVisual)
@@ -124,14 +126,17 @@ public class Inventory : MonoBehaviour
 		if(!isEquipped(item))
 		{
 			equippedItems.Add(item);
+			inventoryItems.Remove (item);
 			itemVisual.transform.SetParent(equipmentCanvas.transform,false);//move visual to equipment panel.
 		}
 		else
 		{
 			//what happens if itemType is euipped or item is already equipped.
+			inventoryItems.Add(item);
 			equippedItems.Remove(item);
 			itemVisual.transform.SetParent(inventoryCanvas.transform,false);
 		}
+		SetEquippedItemEffects();
 	}
 
 	//checks if item is already equippe

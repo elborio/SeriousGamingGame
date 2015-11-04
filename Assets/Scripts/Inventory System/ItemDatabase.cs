@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class ItemDatabase : MonoBehaviour 
 {
 	public List<Item> items;
@@ -13,14 +14,14 @@ public class ItemDatabase : MonoBehaviour
 	{
 		items = new List<Item>();
 		itemUniqueIDInc = 0;
-		print("item Unique Id Start: "+itemUniqueIDInc);
+		//print("item Unique Id Start: "+itemUniqueIDInc); //TODO:Fix The random increments?
 	}
 
 	public static int GetUniqueID(Item i)
 	{
 		i.itemID = itemUniqueIDInc;
 		itemUniqueIDInc++;
-		print ("Get unique ID called: "+itemUniqueIDInc);
+		//print ("Get unique ID called: "+itemUniqueIDInc);
 		return itemUniqueIDInc -1;
 	}
 

@@ -12,6 +12,7 @@ public class Shop : MonoBehaviour
 
 	void Start()
 	{
+		//TODO:Make sure shop doesnt recreate items from prefabs if item already exist.
 		items = new List<Item>();
 
 		IDB = GameObject.FindGameObjectWithTag("ItemDatabase").GetComponent<ItemDatabase>();

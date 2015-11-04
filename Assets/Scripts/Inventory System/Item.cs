@@ -12,7 +12,6 @@ public class Item
 	public int itemID;
 	public int itemDatabaseID; //basis prefab
 	public ItemType itemType;
-
 	public Color clothesColor;
 
 	public Item(Item item) //Copy Constructor.
